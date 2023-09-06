@@ -1,0 +1,16 @@
+{
+  "name": "wechat-mini-component",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eslintrc.js",
+  "dependencies": {
+    "@vant/area-data": "^1.5.0",
+    "@vant/weapp": "^1.10.25"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

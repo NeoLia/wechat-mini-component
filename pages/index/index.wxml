@@ -1,0 +1,5 @@
+<van-button type="primary" bind:click="showAreaSelector">展示区域选择器</van-button>
+
+<van-action-sheet show="{{ ifShowAreaSelector }}" title="选择区域" overlay="true">
+    <area-selector targetAreaCode="441200" bind:confirmArea="confirmArea"></area-selector>
+</van-action-sheet>
