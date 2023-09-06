@@ -1,1 +1,3 @@
-<van-area area-list="{{ customAreaList }}" value="{{ targetAreaValue }}" bind:confirm="confirmArea" />
+<van-action-sheet show="{{ true }}" title="选择区域" overlay="true">
+    <van-area area-list="{{ customAreaList }}" value="{{ targetAreaValue }}" bind:confirm="confirmArea" cancel-button-text="" />
+</van-action-sheet>

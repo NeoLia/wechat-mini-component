@@ -1,7 +1,9 @@
 {
   "usingComponents": {
-    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "area-selector": "/components/area-selector/area-selector",
+    "rotation-chart": "/components/rotation-chart/rotation-chart",
     "van-button": "@vant/weapp/button/index",
-    "area-selector": "/components/area-selector/area-selector"
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index"
   }
 }

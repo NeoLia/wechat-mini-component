@@ -26,6 +26,7 @@ Component({
      */
     lifetimes: {
         attached() {
+            console.log('this.properties.targetAreaCode', this.properties.targetAreaCode);
             let customProvinceList = areaList.province_list;
             let customCityList = areaList.city_list;
             let customCountyList = areaList.county_list;
@@ -49,6 +50,18 @@ Component({
                         delete customProvinceList[provinceProp]
                     }
                 }
+                if(Object.keys(customProvinceList).length === 0) {
+                    customProvinceList = {
+                        440000: '广东省'
+                    };
+                    customCityList = {
+                        441200: '肇庆市'
+                    };
+                    this.setData({
+                        targetAreaValue: 441200
+                    });
+                }
+
                 const targetCityPrefix = parseInt(this.properties.targetAreaCode / 100);
                 for (let cityProp in customCityList) {
                     const tempCityPrefix = parseInt(cityProp / 100);
@@ -56,6 +69,18 @@ Component({
                         delete customCityList[cityProp]
                     }
                 }
+                if(Object.keys(customCityList).length === 0) {
+                    customProvinceList = {
+                        440000: '广东省'
+                    };
+                    customCityList = {
+                        441200: '肇庆市'
+                    };
+                    this.setData({
+                        targetAreaValue: 441200
+                    });
+                }
+
                 this.setData({
                     targetAreaValue: this.properties.targetAreaCode
                 });

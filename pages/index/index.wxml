@@ -1,5 +1,11 @@
-<van-button type="primary" bind:click="showAreaSelector">展示区域选择器</van-button>
+<view style="width: 100%;">
+    <van-grid column-num="3">
+        <van-grid-item icon="photo-o" text="区域选择器" bind:click="showAreaSelector" />
+        <van-grid-item icon="photo-o" text="轮播图" />
+        <van-grid-item icon="photo-o" text="订单列表项" />
+    </van-grid>
+</view>
 
-<van-action-sheet show="{{ ifShowAreaSelector }}" title="选择区域" overlay="true">
-    <area-selector targetAreaCode="441200" bind:confirmArea="confirmArea"></area-selector>
-</van-action-sheet>
+<area-selector wx:if="{{ ifShowAreaSelector }}" targetAreaCode="{{ targetAreaCode }}" bind:confirmArea="confirmArea"></area-selector>
+
+<rotation-chart imageUrls="{{ imageUrls }}"></rotation-chart>

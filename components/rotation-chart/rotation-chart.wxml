@@ -1,0 +1,7 @@
+<swiper style="width: 100%;" indicator-dots="{{ true }}" autoplay="{{ true }}">
+    <block wx:for="{{ imageUrls }}" wx:key="*this">
+        <swiper-item>
+            <image src="{{ item }}" mode="aspectFit" style="width: 100%;height: 100%;" />
+        </swiper-item>
+    </block>
+</swiper>
